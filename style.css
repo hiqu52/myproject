@@ -1,0 +1,924 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #1a1f36;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Logo Text with Gradient & Animation */
+#logo-text {
+    font-size: 70px;
+    font-weight: bold;
+    position: relative;
+    bottom: 22px;
+    top: 4px;
+    left: 10px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #ffcc00, #ff6b6b);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s ease infinite;
+}
+
+/* Moving Gradient Animation
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+#logo-img{
+margin-right: 500px;
+position: relative;
+bottom: 22px;
+top: 4px;
+
+}
+#solagon{
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+/* Pricing Section */
+#pricing {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+
+#pricing h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* top: 20px; */
+}
+
+
+/* Pricing Area */
+.pricing-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Individual Area Styling */
+.area {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.area img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Title & Price */
+.area h3 {
+    color: #1e3c72;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.area p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Google Maps Button */
+.map-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px; /* Reduced width */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s;
+    border: none;
+    width: 150px;
+}
+
+.map-btn:hover {
+
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ff6b6b, #ff9e6b);
+    
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-area {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+
+/* Cars Pic Section Styling */
+#cars-pic {
+    display: flex;
+    flex-direction: column; /* One image per row */
+    align-items: center;
+    gap: 20px; /* Space between images */
+    padding: 50px 20px;
+    margin-top: 60px; /* Extra space above */
+    position: relative;
+    
+    /* Background with Blur Effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px); /* Glassmorphism Effect */
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Car Image Container */
+.car-image {
+    width: 90%; /* Larger width */
+    max-width: 500px; /* Prevents it from getting too large */
+    height: 300px; /* Increased height */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+/* Image Styling */
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: brightness(95%);
+}
+
+/* Book Now Button */
+.book-now {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient color */
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 120px; /* Smaller button width */
+    box-shadow: 0px 3px 8px rgba(255, 126, 95, 0.5);
+}
+
+/* Button Hover Effect */
+.book-now:hover {
+    background: linear-gradient(to right, #ff6b6b, #ff9e6b);
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Image Hover Effects */
+.car-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.car-image:hover img {
+    transform: scale(1.08);
+    filter: brightness(100%);
+}
+
+/* Booking Form Container */
+#booking-form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#booking-form:hover {
+    background-color: #dfe3e8;  /* Slightly darker gray on hover */
+    transform: translateY(-4px);}
+
+/* Form Heading */
+#booking-form h2 {
+    font-size: 37px;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 16px;
+    color: #1a1f36;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Input, Select, and Option Styling */
+input, select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    margin-top: 8px;
+    background-color: #fff;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Focus Effect */
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    outline: none;
+    background-color: #f8f9fa;
+}
+
+/* Hover Effect */
+input:hover, select:hover {
+    background-color: rgba(239, 239, 239, 0.5);
+    border-color: #007bff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Select Field */
+select {
+    appearance: none;
+    cursor: pointer;
+    background-color: white;
+    padding-right: 40px;
+    position: relative;
+}
+
+/* Dropdown Arrow for Select */
+select::-ms-expand {
+    display: none;
+}
+
+/* Select Option Styling */
+select option {
+    padding: 12px;
+    font-size: 16px;
+    background: white;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect for Options */
+select option:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Submit Button Styling */
+button {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    padding: 12px 18px;
+    margin: 20px auto 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(to right, #ff6b6b, #ff9e6b);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(255, 126, 95, 0.3);
+}
+
+
+
+#about {
+    background: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+nav {
+    background-color: rgb(0, 0, 0);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+/* Gradient Text */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Underline Animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Hover Effect: White Color & Underline Expansion */
+.nav-links a:hover, .nav-links a.active {
+    -webkit-text-fill-color: white; /* Turns white on hover */
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Ensure "About Us" appears together */
+.nav-links li.about-us {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-links li.about-us a {
+    display: inline;
+}
+
+/* Mobile Navigation */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+    transform: rotate(90deg);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background: rgba(26, 31, 54, 0.9); /* Slightly transparent dark */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+
+/* Google Map Section */
+#map-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+}
+
+/* Map Heading Styling */
+.map-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Underline Animation Effect */
+.map-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 8px auto 0;
+    border-radius: 2px;
+    transition: width 0.4s ease-in-out;
+}
+
+.map-heading:hover::after {
+    width: 80px; /* Expands on hover */
+}
+
+/* Map Container Styling */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Increased max width */
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Map Container */
+.map-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Google Map */
+.map-container iframe {
+    width: 100%;
+    height: 500px; /* Increased height */
+    border-radius: 20px;
+    filter: grayscale(20%) contrast(110%); /* Slightly enhanced color */
+    transition: filter 0.3s ease;
+}
+
+/* Interactive effect on iframe hover */
+.map-container iframe:hover {
+    filter: grayscale(0%) contrast(120%);
+}
+
+       
+/* Description Styling */
+.description {
+    text-align: center;
+    padding: 50px 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
+    max-width: 850px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding a glowing effect */
+.description::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Heading Styling */
+.description h2 {
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to right, #ff416c, #ff4b2b); /* More vibrant gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 75, 43, 0.3);
+}
+
+/* Underline Effect */
+.description h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff4b2b;
+    margin: 10px auto;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+/* Paragraph Styling */
+.description p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+/* Hover Effects */
+.description:hover {
+    background: linear-gradient(135deg, #f1f1f1 0%, #e6e6e6 100%);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Underline Expansion on Hover */
+.description:hover h2::after {
+    width: 120px;
+}
+
+/* Add glow effect on hover */
+.description:hover::before {
+    opacity: 1;
+}
+
+/* Common Box Styling */
+.note-box,
+.airport-box {
+    background: #ffffff; /* White background for content readability */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative;
+    overflow: hidden; /* Ensures pseudo-elements don't overflow */
+}
+
+/* Adding subtle gradient shine effect */
+.note-box::before,
+.airport-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Specific Styling for Note Box */
+.note-box {
+    border-left: 6px solid #ffcc00; /* Yellow-golden accent border */
+    background: linear-gradient(135deg, #fff3e0 0%, #ffecb3 100%); /* Soft golden gradient */
+}
+
+/* Specific Styling for Airport Box */
+.airport-box {
+    border-left: 6px solid #007bff; /* Deep blue accent border */
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); /* Soft blue gradient */
+}
+
+/* Hover Effects */
+.note-box:hover,
+.airport-box:hover {
+    transform: translateY(-7px); /* More noticeable lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for hover effect */
+    background: linear-gradient(135deg, #f7f1e3 0%, #ffcc80 100%); /* Slightly darker gradient on hover */
+}
+
+/* Add Glow Effect on Hover */
+.note-box:hover::before,
+.airport-box:hover::before {
+    opacity: 1;
+}
+
+/* Animated Accent Border */
+.note-box::after,
+.airport-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease-in-out;
+}
+
+.note-box:hover::after,
+.airport-box:hover::after {
+    width: 100%;
+}
+
+
+/* Alert message styling */
+.alert {
+    padding: 15px;
+    background-color: #28a745;  /* Green background for success messages */
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Sticky WhatsApp Button (Left Side) */
+.whatsapp-chat {
+    position: fixed;
+    left: 20px; /* Distance from left */
+    bottom: 20px; /* Distance from bottom */
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.whatsapp-btn {
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #1a1f36;  /* Dark footer */
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Unified Section Styling */
+#contact-info, #useful-links, #faqs {
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 900px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #00c6ff 100%); /* Stylish Blue Gradient */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding Gradient Overlay for Depth Effect */
+#contact-info::before, #useful-links::before, #faqs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8), rgba(0, 198, 255, 0.8));
+    z-index: 1;
+    border-radius: 15px;
+}
+
+#contact-info * , #useful-links * , #faqs * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Headers */
+#contact-info h2, #useful-links h2, #faqs h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Contact Box Styling */
+.contact-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.2);
+}
+
+.contact-box p {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-box i {
+    font-size: 22px;
+    color: #ffcc00;
+}
+
+/* Useful Links */
+#useful-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+#useful-links li {
+    margin: 10px 0;
+}
+
+#useful-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+#useful-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* FAQ Section */
+.faq {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.faq:hover {
+    transform: scale(1.05);
+}
+
+.faq h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.faq p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-info, #useful-links, #faqs {
+        padding: 40px 15px;
+    }
+
+    .contact-box, .faq {
+        width: 90%;
+    }
+
+    .faq h3 {
+        font-size: 18px;
+    }
+
+    .faq p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
